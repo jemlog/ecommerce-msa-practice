@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  rabbitmq: # 나중에는 쿠버네티스 인스턴스에 띄워놔야 한다
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://Users/seojemin/IdeaProjects/advance/git-local-repo # 로컬 git에 저장할 수도 있고, github을 사용할 수도 있다
+          default-label: master # 어떤 브랜치를 사용할껀지 체크
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh # busfresh는 config 동기화 목적

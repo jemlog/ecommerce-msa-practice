@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: user-service # 공개해도 상관 없는 정보는 그냥 application.yml에 적용하고, 숨겨야 하는 정보들은 config에 밀어넣기

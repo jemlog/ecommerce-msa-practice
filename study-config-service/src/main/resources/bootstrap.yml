@@ -1,0 +1,5 @@
+encrypt:
+  key-store:
+    location: file://Users/seojemin/IdeaProjects/advance/keystore/apiEncryptionKey.jks # 비대칭키로 키 복호화, 이 작업은 API 호출로 수동으로 해야 한다
+    password: test1234 # 복호화 비밀번호
+    alias: apiEncryptionKey

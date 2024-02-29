@@ -1,0 +1,5 @@
+#spring:
+#  cloud:
+#    config:
+#      uri: http://127.0.0.1:8888
+#      name: user-service # 어떤 이름을 가진 yml 파일을 일어올지 설정, 여기에 profile 설정하면 해당 이름의 파일 가져온다
