@@ -1,5 +1,10 @@
 package study.studyorderservice.domain
 
 enum class OrderState {
-    CANCEL
+    PAYMENT_WAITING,
+    PREPARING,
+    SHIPPED,
+    DELIVERING,
+    DELIVERY_COMPLETED,
+    CANCELED,
 }
