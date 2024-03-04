@@ -5,10 +5,10 @@ import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class OrderProducer(val kafkaTemplate: KafkaTemplate<String, Long>) {
+class OrderCreatedProducer(val kafkaTemplate: KafkaTemplate<String, Long>) {
 
     companion object{
-        val ORDER_CREATED_TOPIC = "order-created-topic"
+        const val ORDER_CREATED_TOPIC = "order-created-topic"
     }
 
     fun send(orderId: Long){
