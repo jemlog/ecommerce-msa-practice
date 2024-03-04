@@ -14,12 +14,16 @@ import org.springframework.kafka.core.ProducerFactory
 @Configuration
 class KafkaProducerConfig {
 
+    companion object{
+        const val BOOTSTRAP_SERVER_URL = "127.0.0.1:9092"
+    }
+
     @Bean
     fun producerFactory(): ProducerFactory<String, Long> {
 
         val props = HashMap<String, Any>()
 
-        props[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = "127.0.0.1:9092"
+        props[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = BOOTSTRAP_SERVER_URL
         props[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
         props[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = LongSerializer::class.java
 
