@@ -8,7 +8,6 @@ import study.studyorderservice.repository.OrderRepository
 class OrderWriter(
     private val orderRepository: OrderRepository
 ) {
-
     fun save(order: Order): Order{
         return orderRepository.save(order)
     }
